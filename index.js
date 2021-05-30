@@ -1,5 +1,6 @@
 require('dotenv').config()
 const express = require('express');
+const axios = require("axios").default;
 
 const app = express();
 //Midleware for parsing JSON
@@ -12,7 +13,7 @@ app.post("/github", (req, res) => {
     const username = req.body.sender.login;
     const action= req.body.action;
     const full_name=req.body.repository.full_name;
-    const userURL=req.body.sender.html_url;
+    const avatar_url=req.body.sender.avatar_url;
     const content = `User ${username} just made changes to the ${full_name} repository`;
     axios
         .post(process.env.DISCORD_WEBHOOK_URL, {
