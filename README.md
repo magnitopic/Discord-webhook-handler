@@ -6,8 +6,13 @@ __New to webhooks?__ You can learn more about them in [this YouTube video](https
 ## The *.env* file
 The *.env.example* file contains the name of the enviroment variable that is used to connect to Discord.
 You can copy/paste it and rename it to *__.env__*. Inside paste the Discord webhook url.
+## Install dependencies
+Install the paquetes the project needs by running in your console:
+```bash
+npm install
+```
 ## Run
-Run the server by typing in your console:
+Run the server by runing in your console:
 ```bash
 npm run dev
 ```
